@@ -128,7 +128,7 @@ data InitializeParams =
 
 {-# DEPRECATED _rootPath "Use _rootUri" #-}
 
-deriveJSON lspOptions ''InitializeParams
+deriveJSON (lspOptions {omitNothingFields=False}) ''InitializeParams
 
 -- ---------------------------------------------------------------------
 -- Initialize Response
